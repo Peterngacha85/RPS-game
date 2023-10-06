@@ -14,8 +14,8 @@ let gameInProgress = true; // Flag to track if the game is still in progress
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        // Check if the game is still in progress (less than 10 rounds played)
-        if (gameInProgress && roundCount < 10) {
+        // Check if the game is still in progress (less than 5 rounds played)
+        if (gameInProgress && roundCount < 5) {
             const playerChoice = button.textContent; // Get the emoji text from the button
 
             // Display the player's choice
@@ -34,8 +34,8 @@ buttons.forEach((button) => {
             // Increment the round count
             roundCount++;
 
-            // Check if the game has been played for 10 rounds
-            if (roundCount === 10) {
+            // Check if the game has been played for 5 rounds
+            if (roundCount === 5) {
                 gameInProgress = false; // Game is over
                 displayWinner();
             }
@@ -86,7 +86,7 @@ function displayRoundResult(result) {
     // Implement your logic to display the result on the page (e.g., in a <div>)
 }
 
-// Function to display the winner after 10 rounds
+// Function to display the winner after 5 rounds
 
 
 function displayWinner() {
@@ -102,4 +102,3 @@ function displayWinner() {
         whoWonSpan.textContent = '   TIE';
     }
 }
-
