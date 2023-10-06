@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    border: rgb(249, 4, 179) 5px double;
+    border-radius: 20px;
+    height: 100dvh;
+    margin:  auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.tool-container {
+    width: 100%;
+    margin: 0 auto;
+    height: 20dvh;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    border-radius: 20px 20px 0 0 ;
+    -webkit-border-radius: 20px 20px 0 0 ;
+    -moz-border-radius: 20px 20px 0 0 ;
+    -ms-border-radius: 20px 20px 0 0 ;
+    -o-border-radius: 20px 20px 0 0 ;
+}
+.tool-container button{
+    outline: none;
+    border: none;
+    background: transparent;
+   
+
+}
+.hr1{
+    margin: 8px 0px;
+    width: 100%;
+
+}
+.emoji{
+    font-size: 40px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+.emoji:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+.emoji:active{
+    transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+}
+.score-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.display-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; 
+    height: 30dvh;
+    overflow: hidden;
+} 
+.you, .computer{
+    font-size: 120px;
+    font-weight: 900;
+}
+.winner {
+    height: 20dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  rgb(249, 4, 179);
+}
+.CENTER-WINER, .h1, .new-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.computer-score , .your-score{
+    color:  rgb(249, 4, 179);
+    font-size: 45px;
+}
+.winner{
+    display: none;
+}
+.new-game{
+    height: 20dvh;
+}
+.new-game-btn {
+    
+    padding: 30px;
+    background: #ccc;
+    color: rgb(249, 4, 179);
+    font-weight: 900;
+    font-size: 35px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 5px dashed rgb(249, 4, 179);
+  
+    /* Keyframe animation */
+    animation: blink-and-shrink 1s infinite;
+    display: none;
+  }
+  
+  @keyframes blink-and-shrink {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+  }
